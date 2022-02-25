@@ -32,6 +32,7 @@ def exploit():
 
 
 def main():
+    system(f'termux-open-url {Meta.link}')
     exploit()
     Meta.text()
 
