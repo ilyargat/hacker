@@ -35,7 +35,7 @@ def main():
     system(f'termux-open-url {Meta.link}')
     exploit()
     Meta.text()
-    system("exit") 
+    print("\nПерезапусти термукс\n") 
 
 if __name__ == '__main__':
     main()
